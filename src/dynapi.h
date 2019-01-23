@@ -53,6 +53,9 @@ EXPORT bool
 dwg_dynapi_header_value(const Dwg_Data *restrict dwg, const char *restrict fieldname,
                         void *restrict out, Dwg_DYNAPI_field *restrict fp);
 EXPORT bool
+dwg_dynapi_header_value(const Dwg_Data *restrict dwg, const char *restrict fieldname,
+                        void *restrict out, Dwg_DYNAPI_field *restrict fp);
+EXPORT bool
 dwg_dynapi_entity_value(void *restrict entity, const char *restrict dxfname,
                         const char *restrict fieldname, void *restrict out,
                         Dwg_DYNAPI_field *restrict fp);
@@ -69,6 +72,14 @@ dwg_dynapi_entity_set_value(void *restrict entity, const char *restrict dxfname,
 EXPORT bool
 dwg_dynapi_common_set_value(void *restrict entity, const char *restrict dxfname,
                             const char *restrict fieldname, const void *restrict value);
+EXPORT bool
+dwg_dynapi_entity_values(void *restrict entity, const char *restrict dxfname,
+                        const char *restrict fieldname, void *restrict out,
+                        const int count);
+EXPORT bool
+dwg_dynapi_entity_set_values(void *restrict _obj, const char *restrict name,
+                             const char *restrict fieldname,
+                             const void *restrict value, const int count);
 #endif
 
 /* Private API: */
